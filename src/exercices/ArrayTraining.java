@@ -4,9 +4,8 @@ public class ArrayTraining {
      * @param n size of the array, eg: 3
      * @return an empty int array of size n, eg: {0, 0, 0}
      */
-    public int[] emptyIntArray(int n) {
-
-        return null;
+   int [] tab= new int [n];
+       return tab;
     }
 
     /**
@@ -14,8 +13,8 @@ public class ArrayTraining {
      * @return an empty String array of size n, eg: {null, null}
      */
     public String[] emptyStringArray(int n) {
-
-        return null;
+     int [] tab= new int [n];
+       return null;
     }
 
     /**
@@ -37,7 +36,7 @@ public class ArrayTraining {
      * eg: {"test", sample", "value"}
      */
     public String[] stringArray(String a, String b, String c) {
-
+        int [] tab={"a","b","c"};
         return null;
     }
 
@@ -46,8 +45,9 @@ public class ArrayTraining {
      * @return length of the array, eg: 1
      */
     public int length(int[] array) {
+        
 
-        return 0;
+        return array.length;
     }
 
     /**
@@ -56,7 +56,7 @@ public class ArrayTraining {
      */
     public int firstValue(int[] array) {
 
-        return 0;
+        return array[0];
     }
 
     /**
@@ -65,7 +65,11 @@ public class ArrayTraining {
      */
     public int lastValue(int[] array) {
 
-        return 0;
+          int value;
+    for(int i=0, i<array.length, i++){
+        value=array[i];            
+    }
+       return value;
     }
 
     /**
@@ -75,7 +79,7 @@ public class ArrayTraining {
      */
     public int valueAtPosition(int[] array, int position) {
 
-        return 0;
+        return array[position];
     }
 
     /**
@@ -86,7 +90,8 @@ public class ArrayTraining {
      */
     public int[] replace(int[] array, int value, int position) {
 
-        return null;
+         array[position]= value;
+       return array;
     }
 
     /**
@@ -95,7 +100,11 @@ public class ArrayTraining {
      */
     public int sum(int[] array) {
 
-        return 0;
+         int resultat;
+    for(int i=0; i<array.length; i++){
+        resultat=resultat+array[i];
+    }
+       return resultat;
     }
 
     /**
@@ -105,17 +114,28 @@ public class ArrayTraining {
      */
     public boolean contains(int[] array, int search) {
 
-        return false;
-    }
+        for(int i=0; i<array.length; i++){
+        if(array[i]==search){
+            return true;
+       }
+           return false;
+    
+       }
 
     /**
      * @param array, eg: {"sample", "value"}
      * @return array where all words are capitalized, eg: {"Sample", "Value"}
      */
     public String[] capitalize(String[] array) {
-
-        return null;
-    }
+    String [] string={"sample","value"};
+       for(int i =0;i<=string.length-1;i++){
+           String name=string[i];
+           String name1=name.substring(0, 1).toUpperCase();
+           String name2=name.substring(1);
+           string[i]=name1+name2;
+       }
+   }
+        
 
     /**
      * @param first,  eg: {1, 2, 3}
@@ -125,8 +145,18 @@ public class ArrayTraining {
      */
     public boolean equals(int[] first, int[] second) {
 
-        return false;
+         if(first.length == second.length){    
+        for(int i=0; i<array.length; i++){
+            if(first[i]!=second[i]){
+                return false;                
+            }
+        }
+        return true;
+    }else{
+           return false;
     }
+   }
+    
 
     /**
      * @param array, eg: {1, 2, 3}
